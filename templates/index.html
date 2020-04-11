@@ -1,0 +1,95 @@
+{% extends "base.html" %} {% block content %}
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Yoga</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css') }}" />-->
+</head>
+
+<body >
+  <div id="box" style="		align-items: center; 	background-color: #21D4FD;	background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);  	height: 100vh;">
+  <div class="wrapper">
+  <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+          <div class="container-fluid" style="text-align:center;">
+            <h1 style= "font-size: 4rem; font-weight:600; color:white;"> AI in Enterprise Systems Project </h1>
+
+          </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+          <div class="container-fluid">
+
+              <div class="row">
+                  <div class="col-md-4"></div>
+
+                      <div class="col-md-4">
+                      <div class="card " style="background-color: transparent; border:none;">
+                          <div class="card-header " >
+                              <h4 class="card-title" style="text-align:center; align-content:center;font-size: 2.5rem; font-weight:400; color:white;">Yoga Pose Prediction using AI</h4>
+                              <p class="card-category"></p>
+                          </div>
+                          <div class="card-body " style="background-color: transparent; border:none;">
+                                    <div class="panel" style="background-color: transparent;">
+                                  <!--  <input id="file-upload" class="hidden" style="display:none;" type="file" accept="image/x-png,image/gif,image/jpeg" />
+                                    <label for="file-upload" id="file-drag" class="upload-box">
+                                      <div id="upload-caption" class="btn btn-info btn-round">Upload a Picture</div>
+                                      <img id="image-preview" class="hidden" style="display:none;"/>
+                                    </label>-->
+                                    <input id="file-upload" class="hidden" style="display:none;" type="file" accept="image/x-png,image/gif,image/jpeg" />
+                                    <label for="file-upload" id="file-drag" class="upload-box">
+                                      <div id="upload-caption" class="btn btn-secondary btn-lg" style="" >
+                                       <div id="upldimg" style=";"><h3>Upload an Image</h3>
+
+                                         </div>
+                                      </div>
+                                      <img id="image-preview" class="hidden" style="display:none;" />
+                                    </label>
+                                    <span></span>
+                                    <input type="button" value="Submit" class="button btn btn-light  btn-lg" style=" font-size:1.75rem;  margin-left: 80px !important;"  onclick="submitImage();" />
+                                    <input type="button" value="Clear" class="button btn btn-light  btn-lg"  style="  font-size:1.75rem; margin-left: 40px !important;" onclick="clearImage();" />
+
+                                  </div>
+
+                                  </div>
+
+                                </div>
+                          </div>
+                          <div class="col-md-4"></div>
+                          <div class="col-md-12" style="display=!none;" ><br><br><div>
+
+                  <div class="col-md-12" >
+                      <div class="card " style="background-color: transparent; border:none;">
+                          <div class="card-header " style="text-align:center; ">
+                              <h4 class="card-title" style="text-align:center; align-content:center;font-size: 2.5rem; font-weight:400; color:white;">Your Predicted Pose</h4>
+                              <div id="pred-result" class="hidden" style="text-align:center; align-content:center;font-size: 2.5rem; font-weight:400; color:white;"></div>
+
+                              <p class="card-category"></p>
+                          </div>
+                          <div class="card-body " style="height: 310px; text-align: center;">
+                                  <div id="image-box">
+                                    <img id="image-display"  />
+                                    <div id="pred-result" class="hidden" style="font-size: 18px; padding: 20px 20px 20px 0px;"></div>
+                                    <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
+                                      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+                                    </svg>
+                                  </div>
+                                </div></div>
+                          </div>
+                      </div>
+                  </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+{% endblock content %}
+{% block scripts %}
+<script src="{{ url_for('static',filename='yoga.js') }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+{% endblock scripts %}
